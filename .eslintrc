@@ -1,7 +1,10 @@
 {
   "parser": "@babel/eslint-parser", // uses babel-eslint transforms
   "parserOptions": {
-    "requireConfigFile": false
+    "requireConfigFile": false,
+    "ecmaFeatures": {
+      "jsx": true
+  }
   },
   "settings": {
     "react": {

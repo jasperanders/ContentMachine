@@ -1,4 +1,4 @@
- eslint-disable react/display-name */
+/*eslint-disable react/display-name */
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
