@@ -1,4 +1,5 @@
 const path = require("path");
+const slugify = require("slugify");
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage, createRedirect } = actions;
@@ -12,6 +13,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       {
         allMdx(filter: { fileAbsolutePath: { regex: "/resources/" } }) {
           nodes {
+            parent {
+              ... on File {
+                name
+              }
+            }
             body
             slug
             frontmatter {
@@ -40,7 +46,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (posts.length > 0) {
     posts.forEach((post, index) => {
       createPage({
-        path: post.slug,
+        path: `${slugify(post.parent.name, { lower: true })}`,
         component: blogPost,
         context: {
           post,
@@ -49,14 +55,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   }
 
-  
-//   create redirect form / to /de/
-//   createRedirect({
-//     fromPath: "/",
-//     isPermanent: false,
-//     redirectInBrowser: true,
-//     toPath: "/de/",
-//   });
+  //   create redirect form / to /de/
+  // createRedirect({
+  //   fromPath: "/gitlab",
+  //   isPermanent: true,
+  //   toPath: "/resources/01-Coding/03-GitLab/GitLab",
+  // });
 };
 
 exports.onCreateNode = ({ node, actions }) => {

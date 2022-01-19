@@ -16,8 +16,10 @@ import {
   Td,
   Heading,
   Center,
+  ListItem,
   UnorderedList,
-  ListItem
+  OrderedList,
+  Code,
 } from "@chakra-ui/react";
 import Layout from "./src/components/globals/layout";
 import { LocaleProvider } from "gatsby-theme-i18n";
@@ -34,11 +36,14 @@ export const wrapRootElement = ({ element }) => {
   return (
     <MDXProvider
       components={{
+        code: Code,
         p: ({ ...props }) => <Text variant="mdxText" {...props} />,
         ul: ({ ...props }) => (
           <UnorderedList pl="1rem" fontSize="lg" variant="mdxText" {...props} />
         ),
         li: ListItem,
+        ul: UnorderedList,
+        ol: OrderedList,
         table: ({ ...props }) => (
           <Center overflowX="scroll">
             <Table {...props} minWidth="min-content" />,
@@ -49,13 +54,15 @@ export const wrapRootElement = ({ element }) => {
         td: Td,
         tbody: Tbody,
         a: Link,
-        h1: ({ ...props }) => <Heading as="h1" textAlign="center" {...props} />,
+        h1: ({ ...props }) => (
+          <Heading as="h1" variant="majorHeading" {...props} />
+        ),
         h2: ({ ...props }) => (
           <Heading as="h2" variant="subHeading" fontSize="xl" {...props} />
         ),
         h3: ({ ...props }) => (
           <Heading as="h3" variant="subHeading" fontSize="l" {...props} />
-        )
+        ),
       }}
     >
       {element}

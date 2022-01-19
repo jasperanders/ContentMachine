@@ -30,7 +30,7 @@ export default function Gallery() {
 
   return (
     <Container maxW="4xl">
-      <Box p="0" borderRadius="xl" overflow="hidden" my="2rem" shadow="lg">
+      <Box p="0" borderRadius="xl" overflow="hidden" my="2rem" shadow="md">
         <SimpleGrid columns={[1, 1, 2]} spacing="0.5rem">
           {images.map(img => (
             <Box height="100%" overflow="hidden" key={img.name}>

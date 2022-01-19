@@ -21,6 +21,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
+    `gatsby-remark-images`,
     // `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
     {
@@ -55,6 +56,12 @@ module.exports = {
               quality: 80,
             },
           },
+          {
+            resolve: "gatsby-remark-obsidian",
+            // options: {
+            //   titleToURL: (title) => `/${title}`,
+            // },
+          },
         ],
       },
     },
@@ -69,8 +76,8 @@ module.exports = {
       resolve: "gatsby-plugin-eslint",
       options: {
         stages: ["develop"],
-        extensions: ["js", "jsx"],
-        exclude: ["node_modules", ".cache", "public"],
+        extensions: ["js", "jsx", "ts", "tsx"],
+        exclude: ["node_modules", ".cache", "public", "gatsby-browser.js"],
         // Any eslint-webpack-plugin options below
       },
     },
@@ -78,7 +85,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/,
+          include: /diagrams/,
         },
       },
     },

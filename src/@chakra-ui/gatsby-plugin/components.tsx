@@ -3,17 +3,18 @@ import { FaBluetoothB } from "react-icons/fa";
 export const Heading = {
   baseStyle: {
     color: "primary",
+    textAlign: "left",
     my: "2rem",
   },
   variants: {
     logo: {
       fontFamily: "arvo",
-      color: "back"
+      color: "back",
     },
     subHeading: {
       fontFamily: "mono",
       fontStyle: "italic",
-      textAlign: "center",
+      // textAlign: "center",
       fontSize: "4xl",
     },
     blogTitle: {
@@ -23,6 +24,11 @@ export const Heading = {
       fontSize: "3xl",
       color: "warning",
       fontFamily: "mono",
+    },
+    toc: {
+      fontSize: "lg",
+      mt: "4",
+      mb: "2",
     },
   },
 };
@@ -62,5 +68,14 @@ export const Table = {
       minWidth: "900px",
       overflow: "scroll",
     },
+  },
+};
+
+export const Code = {
+  baseStyle: {
+    p: 4,
+    w: "100%",
+    borderRadius: "lg",
+    overflowX: "scroll",
   },
 };

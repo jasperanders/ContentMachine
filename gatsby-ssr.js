@@ -4,8 +4,8 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-import React from "react"
-import { MDXProvider } from "@mdx-js/react"
+import React from "react";
+import { MDXProvider } from "@mdx-js/react";
 import {
   Link,
   Text,
@@ -18,18 +18,20 @@ import {
   Heading,
   Center,
   UnorderedList,
-  ListItem
-} from "@chakra-ui/react"
-import Layout from "./src/components/globals/layout"
+  ListItem,
+} from "@chakra-ui/react";
+import Layout from "./src/components/globals/layout";
+import oTreeArchitecture from "./content/resources/00 Getting Started/diagrams/oTreeArchitecture.drawio.svg";
 
 export const wrapPageElement = ({ element, props }) => {
-  return <Layout {...props}>{element}</Layout>
-}
+  return <Layout {...props}>{element}</Layout>;
+};
 
 export const wrapRootElement = ({ element }) => {
   return (
     <MDXProvider
       components={{
+        oTreeArchitecture,
         p: ({ ...props }) => <Text variant="mdxText" {...props} />,
         ul: ({ ...props }) => (
           <UnorderedList pl="1rem" fontSize="lg" variant="mdxText" {...props} />
@@ -45,16 +47,18 @@ export const wrapRootElement = ({ element }) => {
         td: Td,
         tbody: Tbody,
         a: Link,
-        h1: ({ ...props }) => <Heading as="h1" textAlign="center" {...props} />,
+        h1: ({ ...props }) => (
+          <Heading as="h2" variant="majorHeading" {...props} />
+        ),
         h2: ({ ...props }) => (
-          <Heading as="h2" variant="subHeading" fontSize="xl" {...props} />
+          <Heading as="h3" variant="subHeading" fontSize="xl" {...props} />
         ),
         h3: ({ ...props }) => (
-          <Heading as="h2" variant="subHeading" fontSize="xl" {...props} />
-        )
+          <Heading as="h4" variant="subHeading" fontSize="xl" {...props} />
+        ),
       }}
     >
       {element}
     </MDXProvider>
-  )
-}
+  );
+};
