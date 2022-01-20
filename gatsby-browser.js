@@ -1,4 +1,4 @@
-/* eslint-disable react/display-name */
+/*eslint-disable react/display-name */
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
@@ -16,34 +16,39 @@ import {
   Td,
   Heading,
   Center,
-  ListItem,
   UnorderedList,
   OrderedList,
-  Code,
+  ListItem,
+  Alert,
 } from "@chakra-ui/react";
 import Layout from "./src/components/globals/layout";
-import { LocaleProvider } from "gatsby-theme-i18n";
+require("prismjs/themes/prism.css");
 
 export const wrapPageElement = ({ element, props }) => {
-  return (
-    <LocaleProvider pageContext={props.pageContext}>
-      <Layout {...props}>{element}</Layout>
-    </LocaleProvider>
-  );
+  return <Layout {...props}>{element}</Layout>;
 };
 
 export const wrapRootElement = ({ element }) => {
   return (
     <MDXProvider
       components={{
-        code: Code,
+        blockquote: ({ ...props }) => (
+          <Alert
+            as="blockquote"
+            variant={"left-accent"}
+            colorScheme="teal"
+            bg={"transparent"}
+            {...props}
+          />
+        ),
         p: ({ ...props }) => <Text variant="mdxText" {...props} />,
         ul: ({ ...props }) => (
-          <UnorderedList pl="1rem" fontSize="lg" variant="mdxText" {...props} />
+          <UnorderedList pl="1rem" variant="mdxText" {...props} />
+        ),
+        ol: ({ ...props }) => (
+          <OrderedList pl="1rem" variant="mdxText" {...props} />
         ),
         li: ListItem,
-        ul: UnorderedList,
-        ol: OrderedList,
         table: ({ ...props }) => (
           <Center overflowX="scroll">
             <Table {...props} minWidth="min-content" />,
@@ -57,12 +62,8 @@ export const wrapRootElement = ({ element }) => {
         h1: ({ ...props }) => (
           <Heading as="h1" variant="majorHeading" {...props} />
         ),
-        h2: ({ ...props }) => (
-          <Heading as="h2" variant="subHeading" fontSize="xl" {...props} />
-        ),
-        h3: ({ ...props }) => (
-          <Heading as="h3" variant="subHeading" fontSize="l" {...props} />
-        ),
+        h2: ({ ...props }) => <Heading as="h2" variant="H2" {...props} />,
+        h3: ({ ...props }) => <Heading as="h3" variant="H3" {...props} />,
       }}
     >
       {element}

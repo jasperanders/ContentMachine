@@ -55,12 +55,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   }
 
-  //   create redirect form / to /de/
-  // createRedirect({
-  //   fromPath: "/gitlab",
-  //   isPermanent: true,
-  //   toPath: "/resources/01-Coding/03-GitLab/GitLab",
-  // });
+  createRedirect({
+    fromPath: "/",
+    isPermanent: true,
+    toPath: "/00-motivation/",
+  });
 };
 
 exports.onCreateNode = ({ node, actions }) => {

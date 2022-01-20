@@ -1,5 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-import "@fontsource/playfair-display/900.css"; // Weight 500 with all styles included.
+import "@fontsource/noto-sans/400.css"; // Weight 500 with all styles included.
 import "@fontsource/fira-code/600.css"; // Weight 500 with all styles included.
 import "@fontsource/fira-code/400.css"; // Weight 500 with all styles included.
 import "@fontsource/dosis/700.css"; // Weight 500 with all styles included.
@@ -11,6 +11,7 @@ const theme = extendTheme({
     logo: "arvo",
     heading: "Fira Code",
     mono: "Fira Code",
+    body: "Noto Sans",
   },
   colors: {
     primary: "#1d3557",

@@ -1,28 +1,28 @@
 # Creating a Contious Deployment Environment 
 
-### Server Set Up
+## Server Set Up
 
-1. [[BW-Cloud|Create a new server instance]]
-1. [[MicroK8s Setup|Install Kubernetes]]
-1. [[SSL Encryption using Cert Manager|Install Cert Manager into your cluster]]
+1. [[00 BW-Cloud|Create a new server instance]]
+1. [[02 MicroK8s Setup|Install Kubernetes]]
+1. [[03 SSL Encryption using Cert Manager|Install Cert Manager into your cluster]]
 
-### GitLab Set Up
+## GitLab Set Up
 
-1. [[GitLab Runner|Connect a GitLab Runner to your cluster.]]
-1. [[GitLab Container Registry|Connect allow Kubernetes pods to pull from the GitLab registry]]
-1. [[GitLab CI-CD Pipeline|Write and run a CI Pipeline]]
+1. [[01 Connecting a GitLab Runner|Connect a GitLab Runner to your cluster.]]
+1. [[02 GitLab Container Registry Integration|Connect allow Kubernetes pods to pull from the GitLab registry]]
+1. [[03 Setting Up a GitLab CI Pipeline|Write and run a CI Pipeline]]
 
-### Further Admin Setup
+## Further Admin Setup
 
 1. Add DNS resolution entries for experiments.
 2. Do multiple test runs.
 
-### New Experiment Setup for Admin
+## New Experiment Setup for Admin
 
 1. Assign free Project URL to experiment.
 2. Invite experimenter to GitLab Project.
 
-### New Experiment Setup for Experimenter
+## New Experiment Setup for Experimenter
 
 1. Create a new Project under the group you were just given access to.
 1. Change ingress URL according to your assigned project URL.

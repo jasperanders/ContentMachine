@@ -16,8 +16,8 @@ This project aims to achieve an easier setup for [oTree](https://otree.org) expe
    1. Delete the deployment from the cluster
    2. Reset the oTree Database and Deploy
 
-This is a classic application of a [[DevOps|DevOps]] approach.
+This is a classic application of a [[01 Understanding DevOps|DevOps]] approach.
 
 # Read Next
 
-[[🗺️ The whole picture]]
+[[01 Understanding DevOps|Understand the DevOps approach and get to know som terminology.]]

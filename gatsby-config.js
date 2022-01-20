@@ -49,6 +49,7 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -62,6 +63,8 @@ module.exports = {
             //   titleToURL: (title) => `/${title}`,
             // },
           },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-smartypants`,
         ],
       },
     },
@@ -72,15 +75,15 @@ module.exports = {
         name: `content`,
       },
     },
-    {
-      resolve: "gatsby-plugin-eslint",
-      options: {
-        stages: ["develop"],
-        extensions: ["js", "jsx", "ts", "tsx"],
-        exclude: ["node_modules", ".cache", "public", "gatsby-browser.js"],
-        // Any eslint-webpack-plugin options below
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-eslint",
+    //   options: {
+    //     stages: ["develop"],
+    //     extensions: ["js", "jsx", "ts", "tsx"],
+    //     exclude: ["node_modules", ".cache", "public", "gatsby-browser.js"],
+    //     // Any eslint-webpack-plugin options below
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

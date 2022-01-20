@@ -2,19 +2,11 @@ import React, { FC } from "react";
 import Helmet from "react-helmet";
 
 const SEO_DATA = {
-  description:
-    "Wir sind ein junges, motiviertes Team mit dem Ziel, übergreifenden Austausch zur Nachhaltigkeit in der Gesellschaft zu fördern.",
-  title: "sustainXchange",
-  url: "https://sustainxchange.org/",
-  author: "sustainXchange",
-  keywords: [
-    "Nachhaltigkeit",
-    "Event",
-    "sustain",
-    "Xchange",
-    "sustainX",
-    "change"
-  ]
+  description: "",
+  title: "",
+  url: "",
+  author: "Jasper Anders",
+  keywords: ["devops"],
 };
 
 const SEO: FC<{ title: string; meta?: any }> = ({ title, meta }) => {

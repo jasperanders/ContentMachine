@@ -4,11 +4,10 @@ import { Container, Heading } from "@chakra-ui/layout";
 
 const NotFoundPage = () => {
   useEffect(() => {
-    navigate("/de/");
   }, []);
   return (
     <Container>
-      <Heading>We are redirecting you.</Heading>
+      <Heading>Not found. 404</Heading>
     </Container>
   );
 };

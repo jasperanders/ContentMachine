@@ -10,7 +10,7 @@ export default function Blog({ pageContext }) {
   const { title } = frontmatter;
 
   return (
-    <Container my="4rem" maxW="2xl">
+    <Container my="4rem" maxW="3xl">
       <IconButton
         aria-label="go back"
         variant="ghost"

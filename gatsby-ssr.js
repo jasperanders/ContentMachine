@@ -18,10 +18,10 @@ import {
   Heading,
   Center,
   UnorderedList,
+  OrderedList,
   ListItem,
 } from "@chakra-ui/react";
 import Layout from "./src/components/globals/layout";
-import oTreeArchitecture from "./content/resources/00 Getting Started/diagrams/oTreeArchitecture.drawio.svg";
 
 export const wrapPageElement = ({ element, props }) => {
   return <Layout {...props}>{element}</Layout>;
@@ -31,10 +31,15 @@ export const wrapRootElement = ({ element }) => {
   return (
     <MDXProvider
       components={{
-        oTreeArchitecture,
+        blockquote: ({ ...props }) => (
+          <Box as="blockquote" variant="blockquote" {...props} />
+        ),
         p: ({ ...props }) => <Text variant="mdxText" {...props} />,
         ul: ({ ...props }) => (
-          <UnorderedList pl="1rem" fontSize="lg" variant="mdxText" {...props} />
+          <UnorderedList pl="1rem" variant="mdxText" {...props} />
+        ),
+        ol: ({ ...props }) => (
+          <OrderedList pl="1rem" variant="mdxText" {...props} />
         ),
         li: ListItem,
         table: ({ ...props }) => (
@@ -48,14 +53,10 @@ export const wrapRootElement = ({ element }) => {
         tbody: Tbody,
         a: Link,
         h1: ({ ...props }) => (
-          <Heading as="h2" variant="majorHeading" {...props} />
+          <Heading as="h1" variant="majorHeading" {...props} />
         ),
-        h2: ({ ...props }) => (
-          <Heading as="h3" variant="subHeading" fontSize="xl" {...props} />
-        ),
-        h3: ({ ...props }) => (
-          <Heading as="h4" variant="subHeading" fontSize="xl" {...props} />
-        ),
+        h2: ({ ...props }) => <Heading as="h2" variant="H2" {...props} />,
+        h3: ({ ...props }) => <Heading as="h3" variant="H3" {...props} />,
       }}
     >
       {element}

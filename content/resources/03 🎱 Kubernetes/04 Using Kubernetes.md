@@ -1,5 +1,7 @@
-# kubectl
-`kubectl` is the CLI tool to interact with the [[Kubernetes]] cluster. This is an alternative to the Kubernetes API.
+# Using Kubernetes
+
+## kubectl
+`kubectl` is the CLI tool to interact with the [[00 Understanding Kubernetes]] cluster. This is an alternative to the Kubernetes API.
 
 #### Print all resources
 ```bash
@@ -11,9 +13,9 @@ kubectl get all [--all-namespaces]
 kubectl top pod
 ```
 
-# Pods, Deployments and services
+## Pods, Deployments and services
 
-## Define ENVs for [[Kubernetes#Pods|Pods]] inside YAML
+## Define ENVs for [[00 Understanding Kubernetes#Pods|Pods]] inside YAML
 ```yaml
 apiVersion: v1
 kind: Pod

@@ -1,6 +1,6 @@
 {
-  "name": "sustainXchange",
-  "description": "sustainXchange website",
+  "name": "oForest",
+  "description": "oForest devops docs",
   "version": "1.0.0",
   "author": "Jasper Anders",
   "dependencies": {
@@ -12,6 +12,7 @@
     "@fontsource/arvo": "^4.5.0",
     "@fontsource/dosis": "^4.5.1",
     "@fontsource/fira-code": "^4.5.2",
+    "@fontsource/noto-sans": "^4.5.1",
     "@fontsource/playfair-display": "^4.5.1",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
@@ -32,13 +33,18 @@
     "gatsby-plugin-robots-txt": "^1.6.14",
     "gatsby-plugin-sharp": "^4.5.0",
     "gatsby-plugin-sitemap": "^5.5.0",
+    "gatsby-remark-autolink-headers": "^5.5.0",
     "gatsby-remark-images": "^6.5.0",
     "gatsby-remark-obsidian": "^0.5.0",
+    "gatsby-remark-prismjs": "^6.5.0",
+    "gatsby-remark-smartypants": "^5.5.0",
     "gatsby-source-filesystem": "^4.5.0",
     "gatsby-theme-i18n": "^3.0.0",
     "gatsby-theme-i18n-react-intl": "^3.0.0",
     "gatsby-transformer-json": "^4.5.0",
+    "gatsby-transformer-remark": "^5.5.2",
     "gatsby-transformer-sharp": "^4.5.0",
+    "prismjs": "^1.26.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
@@ -70,7 +76,7 @@
     "start-server-and-test": "^1.14.0"
   },
   "keywords": [
-    "sustainXchange",
+    "devops",
     "cms"
   ],
   "license": "MIT",
