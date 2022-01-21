@@ -22,10 +22,10 @@ A **volume** can be mounted into a container to get data persistency in an other
 A **container runtime** is responsible for actually running a container on the host machine. Docker provides a container runtime, but there are also standalone runtimes (e.g. [Containerd](https://containerd.io/), which is used by Kubernetes).
 
 ### Container Registry
-A **container registy** is a repository where container images are saved. These images can be public, like the [Docker Hub](https://hub.docker.com), or private like the integrated [[GitLab Registry|GitLab Registry]]. When running a container, you can specify where an image should be pulled from. It is a best practice to build an image in a CI pipeline, push it to a registry and while deploying pull the image again.
+A **container registy** is a repository where container images are saved. These images can be public, like the [Docker Hub](https://hub.docker.com), or private, like the integrated [[GitLab Registry|GitLab Registry]]. When running a container, you can specify where an image should be pulled from. It is a best practice to build an image in a CI pipeline, push it to a registry and while deploying pull the image again.
 
 [[02 GitLab Container Registry Integration|Read how to set up your Kubernetes Cluster to pull from the gitlab registry.]]
 
 ### Dockerfile
 
-> _"Docker can build images automatically by reading the instructions from a `Dockerfile`. A `Dockerfile` is a text document that contains all the commands a user could call on the command line to assemble an image."_ -- Docker
+> _"Docker can build images automatically by reading the instructions from a `Dockerfile`. A `Dockerfile` is a text document that contains all the commands a user could call on the command line to assemble an image."_ -- [Docker](https://docker.com)

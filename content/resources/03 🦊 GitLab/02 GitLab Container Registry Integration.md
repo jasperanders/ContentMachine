@@ -15,8 +15,6 @@ kubectl create secret docker-registry regcred --docker-server=registry.gitlab.co
 Don't forget to add the docker secret to the manifest[^1] YAML where you want to
 use an image from the specified registry.
 
-[^1]: `[...]` marks not displayed lines.
-
 ```YAML
 [...]
 spec:
@@ -28,3 +26,7 @@ spec:
     - name: regcred
 [...]
 ```
+
+# Read Next
+
+[[03 Setting Up a GitLab CI Pipeline|Next you can read, how to set up a fully functional pipeline.]]

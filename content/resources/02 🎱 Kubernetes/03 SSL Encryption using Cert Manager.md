@@ -134,7 +134,7 @@ With this out of the way, let's get started:
    exclamation mark, this is because we used the staging issuer (this is also
    the reason you saw the warning).
 
-   ![HTTPS connection to Microbot](./attachments/httpsMicrobot.png)
+   ![HTTPS connection to Microbot](httpsMicrobot.png)
 
    For production, we want to change the annotation in our manifest YAML from
    `cert-manager.io/issuer: "letsencrypt-staging"` to

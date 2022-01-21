@@ -4,7 +4,7 @@ author: Jasper Anders ©
 
 # Using Docker
 
-You should read about "[[00 Understanding Docker]]" first. For the *installation*, just follow the great [documentation](https://docs.docker.com) on the Docker website.
+You should read about "[[00 Understanding Docker|Docker]]" first. For the *installation*, just follow the great [documentation](https://docs.docker.com) on the Docker website.
 
 ## Useful Commands
     
@@ -15,13 +15,13 @@ docker build -t imageName ./
 ```
 
 ### Create and run a [[01 Containerization Terminology#Container|container]] 
-from an image named `imageName`. Name the container `containerName` and map its internal port `9000` to port `8000` of the [[#^912230|host system]].
+from an image named `imageName`. Name the container `containerName` and map its internal port `9000` to port `8000` of the [[01 Containerization Terminology#Host System|host system]].
 ```bash
 docker run --name containerName -p 9000:8000 imageName
 ```
 
 ### Start a Docker [[01 Containerization Terminology#Container|Container]] 
-Start a Docker container, that was created previously with the [[#Create and run a Containerization Terminology Container container|run command.]]
+Start a Docker container, that was created previously with the [[#Create and run a 01 Containerization Terminology Container container|run command.]]
 ```bash
 docker start containerName
 ```

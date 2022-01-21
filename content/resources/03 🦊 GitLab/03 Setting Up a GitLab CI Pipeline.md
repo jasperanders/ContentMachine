@@ -21,9 +21,9 @@ GitLab CI Pipeline is defined in the `gitlab-ci.yaml`. As soon as such a file is
 
 Next, we will take a closer look at the pipeline. You will notice, that we use some env variables. Most of them are available by default, we still have to add `MASTER_PWD` and set a password. This will be later used to access the database and the admin panel.
 
-![Add Environment Variables](./attachments/EnvironmentVariables.png)
+![Add Environment Variables](EnvironmentVariables.png)
 
-See comments below, to understand what the commands do.
+See comments below, to understand what eacg commands does.
 
 ```YAML
 

@@ -4,6 +4,7 @@ author: Jasper Anders ©
 ---
 
 # Setting Up Kubernetes
+- [ ] Deleting @m8
 
 This tutorial is based on [Official microk8s docs](https://microk8s.io/docs/).
 
