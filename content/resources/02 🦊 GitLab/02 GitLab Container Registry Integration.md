@@ -1,3 +1,7 @@
+---
+author: Jasper Anders ©
+---
+
 # GitLab Container Registry Integration
 
 To allow [[00 Understanding Kubernetes|Kubernetes]] to pull from the GitLab Registry. Create a token in the

@@ -1,5 +1,6 @@
 ---
 written Tutorial: https://ubuntu.com/tutorials/gitlab-cicd-pipelines-with-microk8s#4-microk8s-installation
+author: Jasper Anders ©
 ---
 
 # Setting Up Kubernetes
@@ -8,7 +9,7 @@ This tutorial is based on [Official microk8s docs](https://microk8s.io/docs/).
 
 **Requirements**: An instance of Ubuntu 20.04 LTS
 
-- that up to date via `sudo apt update` & `sudo apt upgrade`
+- that is up-to-date via `sudo apt update` & `sudo apt upgrade`
 - that can be accessed via `ssh`
 - that supports `snapd`
 - where ports `22 (ssh), 80 (http), 442 (https)` are open to the internet.
@@ -22,10 +23,10 @@ setting up the _Kubernetes-Dashboard_, _Ingress-Resources_ and _storage_. I want
 to run a standard, **single node** Kubernetes cluster, thus makes sense to take
 a solution that works right out of the box.
 
+## Installing MicroK8s
+
 **Objective:** We will start by installing microk8s, deploy a dummy application
 and view the _Kubernets-Dashboard_ in our browser.
-
-## Installing MicroK8s
 
 1. `ssh` into your server. We will use the `kubectl proxy` command later to view
    the K8s-Dashboard on our server, for this we need an `ssh` tunnel. Create it
@@ -92,7 +93,8 @@ some further setup:
    - dns: Deploy DNS. This addon may be required by others, thus we recommend
      you always enable it.
    - dashboard: Deploy kubernetes dashboard.
-   - ingress: enables a [[00 Understanding Kubernetes#Ingress|nginx-ingress-controller]]
+   - ingress: enables a [[01 Kubernetes Components#Ingress|nginx-ingress-controller]]
+   - helm3 we will need it later 
 
    To enable run:
 
@@ -106,7 +108,7 @@ some further setup:
 ## Taking a Look at the Kubernetes Dashboard
 
 1. In this step you will run the `kubectl proxy` command. This will create a
-   reverse-proxy, so we can access the cluster. Without the tunneling from the
+   reverse-proxy, so we can access the cluster. Without the `ssh` tunneling from the
    first step, we would now only be able to access the Dashboard from the
    localhost of our remote server. This is not very useful as we want to see the
    dashboard in the browser on our system. That's why we created the ssh tunnel
@@ -117,11 +119,11 @@ some further setup:
    ```bash
    kubectl proxy
    > Starting to serve on 127.0.0.1:8001
+   # leave it open to let it keep running
    # open a new shell and ssh into your server using: ssh username@host
    ```
 
-1. We can now access the dashboard under
-   [here](http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#/login).
+1. We can now access the dashboard [here](http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#/login).
    The access token we will need to log in can be acquired using the following
    command:
 
@@ -141,16 +143,16 @@ some further setup:
    deploy this and to make sure your dashboard is working run:
 
    ```bash
-   microk8s kubectl create deployment microbot --image=dontrebootme/microbot:v1
+   kubectl create deployment microbot --image=dontrebootme/microbot:v1
    ```
 
    You can then scale your deployment
 
    ```bash
-   microk8s kubectl scale deployment microbot --replicas=2
+   kubectl scale deployment microbot --replicas=2
    ```
 
-# Open your deployment to the internet
+## Open your deployment to the internet
 
 **Objective:** Be able to excess the microbot under our url over the open
 internet.
@@ -168,7 +170,7 @@ create
 
 Let's dive in!
 
-## Configure IP
+### Configure the Cluster IP
 
 We need to specify the IP under which our cluster is accessible. To do this we
 need to edit `/var/snap/microk8s/current/certs/csr.conf.template` like this:
@@ -333,7 +335,7 @@ Congratulations!
 ## Limit Resource Usage
 
 
->Currently [[GitLab Runner|GitLab Runners]] have a [bug](https://gitlab.com/gitlab-org/gitlab-runner/-/issues/28098) that wont make them work with namespace *ResourceQuotas*. Instead we want to use a *LimitRange*.
+> Currently, [[GitLab Runner|GitLab Runners]] have a [bug](https://gitlab.com/gitlab-org/gitlab-runner/-/issues/28098) that won't make them work with namespace *ResourceQuotas*. Instead, we want to use a *LimitRange*.
 
 I ran in to some problems after a pod requestet too much memory. I had to force
 quit all processes. To prevent this from happening you can create caps on
@@ -379,8 +381,11 @@ kubectl apply -f limit-range.yaml
 kubectl get limitRange
 ```
 
-To get an overview of the resources used by your pods use this command:
-![[04 Using Kubernetes#Print resource usage]]
+To get an overview of the resources used by your pods, use this command:
+
+```bash
+kubectl top pod
+```
 
 ---
 
@@ -398,9 +403,8 @@ the resource we just `applied` like this:
 kubectl delete -f MANIFEST.yaml
 ```
 
-The _actual_ deployment files of this project can be found on GitLab.
+The _actual_ deployment files for this project can be found in [this GitLab Repo](https://gitlab.com/oforest/ogardener) (under `zz_kustomize`).
 
-- [ ] Add GitLab link
 
 # Read Next
 

@@ -1,3 +1,7 @@
+---
+author: Jasper Anders ©
+---
+
 # Understanding Kubernetes
 
 ## Why use Kubernetes?
@@ -12,7 +16,7 @@ At the moment, nothing really. Still, there might be something in the future. If
 
 # Read Next
 
-[[02 MicroK8s Setup|Learn how to deploy a application to the internet using microk8s.]]
+[[02 MicroK8s Setup|Learn how to deploy an application to the internet using microk8s.]]
 
 # Further Resources
 ### Internal
@@ -21,10 +25,6 @@ At the moment, nothing really. Still, there might be something in the future. If
 
 ### External
 - [A great full course on K8s.](https://www.youtube.com/watch?v=X48VuDVv0do)
+- [Kubernets Docs](https://kubernetes.io/docs/home/)
 
---- 
 
-tags: #devops
-Sources: https://kubernetes.io/docs/home/
-
----

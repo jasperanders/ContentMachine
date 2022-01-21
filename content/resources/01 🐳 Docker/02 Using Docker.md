@@ -1,3 +1,7 @@
+---
+author: Jasper Anders ©
+---
+
 # Using Docker
 
 You should read about "[[00 Understanding Docker]]" first. For the *installation*, just follow the great [documentation](https://docs.docker.com) on the Docker website.

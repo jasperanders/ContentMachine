@@ -1,3 +1,7 @@
+---
+author: Jasper Anders ©
+---
+
 # Containerization Terminology
 
 Here you find a selection of definitions for containerization technology.

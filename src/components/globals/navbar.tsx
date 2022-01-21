@@ -44,12 +44,15 @@ export const Navigation = ({ isOpen }) => {
         pt={[4, 4, 0, 0]}
       >
         {headerLinks.map(({ name, to }) => (
-          <MenuItem to={to}>{name}</MenuItem>
+          <MenuItem key={name} to={to}>
+            {name}
+          </MenuItem>
         ))}
 
         {supportedLanguages.length > 1 &&
           supportedLanguages.map((language: string) => (
             <MenuItem
+              key={language}
               to={location.pathname.replace(/(de\/)|(en\/)/g, "")}
               color={locale === language ? "black" : "gray"}
               language={language}

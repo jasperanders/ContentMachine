@@ -1,3 +1,7 @@
+---
+author: Jasper Anders ©
+---
+
 # Connecting a GitLab Runner to your cluster
 
 GitLab allows us to run CI/CD pipelines. For this, GitLab provides _GitLab

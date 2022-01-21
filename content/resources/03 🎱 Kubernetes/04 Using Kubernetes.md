@@ -1,3 +1,7 @@
+---
+author: Jasper Anders ©
+---
+
 # Using Kubernetes
 
 ## kubectl

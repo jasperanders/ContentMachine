@@ -1,3 +1,7 @@
+---
+author: Jasper Anders ©
+---
+
 # Understanding Docker
 
 ## Why use Docker?

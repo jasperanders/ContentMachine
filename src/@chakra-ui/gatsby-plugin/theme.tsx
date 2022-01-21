@@ -4,7 +4,7 @@ import "@fontsource/fira-code/600.css"; // Weight 500 with all styles included.
 import "@fontsource/fira-code/400.css"; // Weight 500 with all styles included.
 import "@fontsource/dosis/700.css"; // Weight 500 with all styles included.
 import "@fontsource/arvo/400.css"; // Weight 500 with all styles included.
-import { Heading, Box, Text, Link, Table, Code } from "./components";
+import { Heading, Box, Text, Link, Table } from "./components";
 
 const theme = extendTheme({
   fonts: {
@@ -31,7 +31,6 @@ const theme = extendTheme({
     Text,
     Link,
     Table,
-    Code,
   },
 });
 

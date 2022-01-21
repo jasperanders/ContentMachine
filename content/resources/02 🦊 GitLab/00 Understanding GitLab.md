@@ -1,7 +1,6 @@
-tags: #devops #platform
-url: https://gitlab.com/
-
---- 
+---
+author: Jasper Anders ©
+---
 
 # Understanding GitLab
 
@@ -13,7 +12,7 @@ GitLab is a [[01 Understanding DevOps#Version Control System|Version Control]] p
 - A [[01 Understanding DevOps#CI CD Pipeline|CI/CD Pipeline]] 
 - A [[01 Containerization Terminology#Registry|Container Registry]]
 - Ticket management through a [Kanban board](https://en.wikipedia.org/wiki/Kanban_board)
-- [[00 Understanding Kubernetes]] integration
+- [[00 Understanding Kubernetes|Kubernetes]] integration
 - Analytics tool integration
 
 GitLab is available in different tiers, most importantly it is open-source and thus can be self-hosted.
@@ -31,3 +30,4 @@ Some related (currently) big names include:
 - [[01 Connecting a GitLab Runner|Setup a GitLab runner]]
 - [[03 Setting Up a GitLab CI Pipeline|Write a CI/CD Pipeline]]
 - [[02 GitLab Container Registry Integration|Pull images from the container registry]]
+

@@ -1,3 +1,7 @@
+---
+author: Jasper Anders ©
+---
+
 # Setting Up a GitLab CI Pipeline
 
 If you don't know what a pipeline is supposed to do, check out [[01 Understanding DevOps#CI Pipeline|this]]. In the [[00 Motivation|Motivation Section]] we laid out some tasks we want our pipeline to perform. The stages of our pipeline will be the following:

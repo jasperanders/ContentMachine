@@ -21,7 +21,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             body
             slug
             frontmatter {
-              title
+              omitBackButton
             }
           }
         }

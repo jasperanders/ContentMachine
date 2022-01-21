@@ -4,7 +4,6 @@ import React from "react";
 import slugify from "slugify";
 
 export default function FileDrawer() {
-
   const { allMdx: data } = useStaticQuery(
     graphql`
       {
@@ -25,13 +24,13 @@ export default function FileDrawer() {
       }
     `
   );
+
   const entries = data.nodes;
   entries.map((entry) => {
     entry.path = entry.parent.relativePath.split("/");
     entry.heading = entry.path.reverse()[1];
   });
 
-  console.log(entries);
   return (
     <Container
       bg={"secondaryLight"}
@@ -41,14 +40,20 @@ export default function FileDrawer() {
       borderRadius={"lg"}
     >
       <Heading>Contents</Heading>
+
       {entries.map((entry, i) => {
         let printHeading = false;
         if (i === 0 || entries[i - 1].heading !== entry.heading) {
           printHeading = true;
         }
+
         return (
-          <>
-            {printHeading && <Heading variant="toc">{entry.heading}</Heading>}
+          <Box key={entry.parent.name}>
+            {printHeading && (
+              <Heading key={entry.heading} variant="toc">
+                {entry.heading}
+              </Heading>
+            )}
             <Link
               as={GLink}
               ml={"4"}
@@ -58,7 +63,7 @@ export default function FileDrawer() {
               {entry.parent.name}
             </Link>
             <br />
-          </>
+          </Box>
         );
       })}
     </Container>

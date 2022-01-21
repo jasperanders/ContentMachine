@@ -26,8 +26,8 @@ const Header = ({ logo }: HeaderProps) => {
       <Link to="/" aria-label="home">
         {logo}
       </Link>
-      <MenuToggle toggle={toggle} isOpen={isOpen} />
-      <Navigation isOpen={isOpen} />
+      {/* <MenuToggle toggle={toggle} isOpen={isOpen} /> */}
+      {/* <Navigation isOpen={isOpen} /> */}
     </Flex>
   );
 };

@@ -1,3 +1,7 @@
+---
+author: Jasper Anders ©
+---
+
 # Provisoning a Server
 
 For the oForest project, we use cloud resources from the
@@ -9,12 +13,12 @@ resource quota by default. The documentation of Kubernetes recommended at least
 We deployed a `m1.large` Ubuntu 20.04 LTS instance. Make sure you add `ssh`
 access to your machine. Also check that your system is up-to-date. For this run:
 
-```
+```bash
 sudo apt update
 sudo apt upgrade
 ```
 
-# Opening Ports
+## Opening Ports
 
 For any traffic to get through to your cluster or application that is deployed
 on your compute instance you need to open Ports. The standard ports are:

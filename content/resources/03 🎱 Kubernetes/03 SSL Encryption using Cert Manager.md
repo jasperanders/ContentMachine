@@ -1,6 +1,7 @@
 ---
 Installation guide: https://cert-manager.io/docs/installation/
 Setup Tutorial: https://cert-manager.io/docs/tutorials/acme/ingress/
+author: Jasper Anders ©
 ---
 
 # Enable HTTPS with Cert Bot

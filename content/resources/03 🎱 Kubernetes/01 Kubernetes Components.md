@@ -1,3 +1,7 @@
+---
+author: Jasper Anders ©
+---
+
 # Kubernetes Components
 
 Because of its abstractions, Kubernetes introduces some concepts that need some introduction. This is not an in depth description of all components. Consider this a quick overview of some essential components.
