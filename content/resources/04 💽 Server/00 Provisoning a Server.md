@@ -25,7 +25,7 @@ For any traffic to get through to your cluster or application that is deployed o
 
 Also, you should allow all egress traffic to exit, if you want to access the internet (you always want). Configure the default security policy as shown below. I tried to add another policy to keep the default one untouched, but at the time of this writing, this didn't seem to work. Instead, I adjusted the default security policy as shown below.
 
-![Security Policy](securityPolicy.png)
+![Security Policy](./attachments/securityPolicy.png)
 
 You should also open these ports on your server firewall. If you do this, double-check the port for ssh is open, otherwise you will lose ssh access. For this, you can use `ufw`:
 

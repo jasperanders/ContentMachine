@@ -119,7 +119,7 @@ some further setup:
 
 1. The dashboard should look something like this:
 
-   ![Dashboard](dashboard.png)
+   ![Dashboard](./attachments/dashboard.png)
 
    In the picture we see a microbot, a dummy application, is deployed. To also deploy this and to make sure your dashboard is working run:
 
@@ -292,7 +292,7 @@ kubectl get ingress
 
 We now find our microbot service exposed to the internet at the provided domain. Congratulations!
 
-![Microbot over HTTP](httpMicrobot.png)
+![Microbot over HTTP](./attachments/httpMicrobot.png)
 
 ## Limit Resource Usage
 

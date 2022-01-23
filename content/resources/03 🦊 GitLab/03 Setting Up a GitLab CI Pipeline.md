@@ -15,7 +15,7 @@ In the [[00 Motivation|Motivation Section]] we laid out some tasks we want our p
 	- Reset the Postgres database using the oTree command `otree resetdb`.
 	- Remove the whole project (i.e. all its resources) from the Kubernetes cluster.
 
-![Pipeline](Pipeline.png)
+![Pipeline](./attachments/Pipeline.png)
 
 GitLab CI Pipeline is defined in the `gitlab-ci.yaml`. As soon as such a file is present in the GitLab repository, the pipeline can be viewed under _CI/CD > Pipelines_.  To run a pipeline, you need to have at [[01 Connecting a GitLab Runner|GitLab Runner]] installed. Make sure to only use runners running in your cluster, otherwise the pipeline won't run.
 
@@ -23,7 +23,7 @@ GitLab CI Pipeline is defined in the `gitlab-ci.yaml`. As soon as such a file is
 
 Next, we will take a closer look at the pipeline. You will notice, that we use some env variables. Most of them are available by default, we still have to add `MASTER_PWD` and set a password. This will be later used to access the database and the admin panel.
 
-![Add Environment Variables](EnvironmentVariables.png)
+![Add Environment Variables](./attachments/EnvironmentVariables.png)
 
 See comments below, to understand what eacg commands does.
 

@@ -2,8 +2,7 @@
 author: Jasper Anders ©
 ---
 
-![Achitecture](./diagrams/oTreeArchitecture.png) _Open the diagram above in a
-separate tab and follow along._
+![Achitecture](./diagrams/oTreeArchitecture.png) _Open the diagram above in a separate tab and follow along._
 
 # oForest Codeflow
 
@@ -26,6 +25,6 @@ To allow for communication between deployments and to the outside, one [[01 Kube
 
 Our line of code has made the journey. It is now deployed to a production environment. This concludes the architectural overview.
 
-# And now You!
+# And Now You!
 
 [[03 Setup|Start your own oTree deployment.]]

@@ -13,10 +13,10 @@ module.exports = {
   supportedLanguages: ["en"],
   //-- NAVIGATION SETTINGS -----
   footerLinks: [
-    {
-      name: "Privacy Statement",
-      to: "/privacy",
-    },
+    // {
+    //   name: "Privacy Statement",
+    //   to: "/privacy",
+    // },
     {
       name: "Imprint",
       to: "/imprint",

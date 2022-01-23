@@ -5,7 +5,7 @@ omitBackButton: true
 
 # Continuous Deployment: Building an Integrated DevOps Environment
 
-This project aims to achieve a fast and easy deployment for [oTree](https://otree.org) experiments. oTree is a python library that helps you to create economics experiments. The Karlsruhe Institute of Technology uses oTree in their [decision & design lab](https://www.kd2lab.kit.edu/english/index.php). Currently, the provisioning of new experiments is outdated and mainly manual. We wanted the new approach to be low effort for experimenters and largely automated. For this, we laid out the following user story:
+This project aims to achieve a fast and easy deployment for [oTree](https://www.otree.org/) experiments. oTree is a python library that helps you to create experiments in the field of economics. The Karlsruhe Institute of Technology uses oTree in their [decision & design lab](https://www.kd2lab.kit.edu/english/index.php). Currently, the provisioning of new experiments is outdated and mainly manual. We wanted the new approach to be low effort for experimenters and largely automated. For this, we laid out the following user story:
 
 1. The experimenter clones a base project from the universities GitLab.
 2. The user adds their experiment code to the repository and makes some minor configurations. They then push the code to a new project. This triggers a CI/CD pipeline.
@@ -20,10 +20,10 @@ This is a classic application of a [[01 Understanding DevOps|DevOps]] approach. 
 
 ## How to Navigate this Documentation
 
-We have tried to allow for non-linear progression through this documentation. Some people might need some introduction to some more basic concepts, others just want to dig into the code examples. The documentation is filled with cross-reference links, if you are not exactly sure what a concept means, we encourage you to click them and come back later.
+We have tried to allow for non-linear progression through this documentation. We want to take different levels of knowledge into consideration. Therefore, we have separated concepts from tutorials and code examples and provide frequent cross-links. If you are not exactly sure what a concept means, we encourage you to click them and come back later.
 
-Still, you will find a recommended next read at the end of most sections, this will provide a more linear reading experience.
+Still, you will find a recommended next read at the end of most sections. This will provide you with some guidance on which topic to proceed with.  
 
 # Read Next
 
-[[01 Understanding DevOps|Understand the DevOps approach and get to know som terminology.]]
+[[01 Understanding DevOps|Understand the DevOps approach and get to know some terminology.]]

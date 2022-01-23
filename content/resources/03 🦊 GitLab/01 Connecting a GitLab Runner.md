@@ -11,7 +11,7 @@ We require our runners to run `kubectl` commands. This allows us to create, appl
 
 First, we need to create a configuration file we call `gitlab-runner-config.yaml`. See below for specification. The values for `gitlabUrl` & `runnerRegistrationToken` can be found under the repo `settings > CI/CD > Runners`. I created a group for all the projects I want to deploy. The installed runners can then be used by every project in the group. If you do the same, use the runner parameters of the group repository (not of one specific application).
 
-![GitLab Runners](RunnersSetup.png)
+![GitLab Runners](./attachments/RunnersSetup.png)
 
 ```YAML
 # gitlab-runner-config.yaml
