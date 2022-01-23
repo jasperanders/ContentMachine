@@ -12,3 +12,4 @@ yarn-error.log
 .obsidian
 .trash
 .yarnrc.yml
+yarn.lock
