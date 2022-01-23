@@ -4,7 +4,9 @@ author: Jasper Anders ©
 
 # Setting Up a GitLab CI Pipeline
 
-If you don't know what a pipeline is supposed to do, check out [[01 Understanding DevOps#CI Pipeline|this]]. In the [[00 Motivation|Motivation Section]] we laid out some tasks we want our pipeline to perform. The stages of our pipeline will be the following:
+If you don't know what a pipeline is supposed to do, check out [[01 Understanding DevOps#CI Pipeline|this]]. For following along, make sure, that you have followed the [[03 Setup|setup steps]] until here. If you don't want to follow along, you can still understand how a pipeline works. 
+
+In the [[00 Motivation|Motivation Section]] we laid out some tasks we want our pipeline to perform. The stages of our pipeline will be the following:
 
 1. **Build Stage:** We will build the docker image defined in our `Dockerfile` and push it to the [[02 GitLab Container Registry Integration|GitLab Registry]]. 
 2. **Release Stage:** We tag the image build in stage 1 with `:latest`. In theory, this step is not necessary, we could have just tagged the image in the previous step. If we had a staging server, we could tag a staging image here.

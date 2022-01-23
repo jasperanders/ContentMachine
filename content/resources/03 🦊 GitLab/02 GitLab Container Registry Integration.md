@@ -12,8 +12,8 @@ cluster like so:
 kubectl create secret docker-registry regcred --docker-server=registry.gitlab.com --docker-username=*** --docker-password=***
 ```
 
-Don't forget to add the docker secret to the manifest[^1] YAML where you want to
-use an image from the specified registry.
+Don't forget to add the docker secret to the manifest YAML where you want to
+use an image from the specified registry. Add:
 
 ```YAML
 [...]
@@ -23,7 +23,7 @@ spec:
       image: registry.gitlab.com/oforest/ogardener:latest
       [...]
   imagePullSecrets:
-    - name: regcred
+    - name: regcred # put in the name of your secret here
 [...]
 ```
 

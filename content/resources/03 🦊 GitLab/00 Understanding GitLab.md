@@ -19,14 +19,12 @@ GitLab is available in different tiers, most importantly it is open-source and t
 
 ## Alternatives to GitLab
 
-If you want to look for alternatives to Docker, use [this or a similar search query.](https://www.google.com/search?q=git+hosting+solutions)
-
-Some related (currently) big names for VCS platforms include:
+If you want to look for alternatives to Docker, use [this or a similar search query.](https://www.google.com/search?q=git+hosting+solutions) Some related (currently) big names for VCS platforms include:
 
 - [GitHub](https://github.com/)
 - [BitBucket](https://bitbucket.org/)
 
-A big name in pipeline building is:
+A big player in pipeline building is:
 
 - [Jenkins](https://jenkins.io)
 

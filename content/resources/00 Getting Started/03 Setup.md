@@ -21,12 +21,14 @@ We have seen an overview of the architecture in the previous section. Now we wil
 ## Further Admin Setup
 
 1. Add DNS resolution entries for experiments.
-2. Do multiple test runs.
+2. Do multiple test runs with backup experiments running.
+3. Check out [[04 Further Considertaions| further considerations]].
 
 ## New Experiment Setup for Admin
 
 1. Assign free Project URL to experiment.
-2. Invite experimenter to GitLab Project.
+2. Make sure no more experiments are running under this URL. You can use the [[03 Setting Up a GitLab CI Pipeline|DELETE button]] in the experiments CI pipeline.
+3. Invite experimenter to GitLab Project. And tell them their URL.
 
 ## New Experiment Setup for Experimenter 
 

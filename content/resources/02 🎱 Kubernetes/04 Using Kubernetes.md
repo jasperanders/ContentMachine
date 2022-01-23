@@ -5,21 +5,39 @@ author: Jasper Anders ©
 # Using Kubernetes
 
 ## kubectl
-`kubectl` is the CLI tool to interact with the [[00 Understanding Kubernetes]] cluster. This is an alternative to the Kubernetes API.
+`kubectl` is the CLI tool that allows interaction with your [[00 Understanding Kubernetes|Kubernetes]] cluster. In the following you will find some useful commands.
 
-#### Print all resources
+### Print all resources
 ```bash
 kubectl get all [--all-namespaces]
 ```
 
-#### Print resource usage
+### Print resource usage
 ```bash
 kubectl top pod
 ```
 
-## Pods, Deployments and services
+### Apply/Delete Manifest YAML
+```
+kubectl apply[delete] -f ./MANIFEST_NAME.yaml
+```
 
-## Define ENVs for [[00 Understanding Kubernetes#Pods|Pods]] inside YAML
+## Pods, Deployments and Services
+
+### Multiple Resources in one Manifest
+Most of the time, you don't want to create single resources at a time. E.g. when you create a deployment, you almost certainly also want to create a service. If so, you can simply chain resource definition by separating them with three dashes:  
+
+```YAML
+[Some Resource]
+[...]
+
+--- 
+
+[Nex Resource]
+[...]
+```
+
+### Define Environment Variables for [[00 Understanding Kubernetes#Pods|Pods]] inside YAML
 ```yaml
 apiVersion: v1
 kind: Pod

@@ -6,9 +6,9 @@ author: Jasper Anders ©
 
 # Enable HTTPS with Cert Bot
 
-In this section, we want to enable HTTPS traffic to our cluster. For this we need a certificate issuer, that is [Let's Encrypt](https://letsencrypt.org/), and we then specify an ingress resource to terminate our SSL connection.
+In this section, we want to enable HTTPS traffic to our cluster. For this we need a certificate issuer, that is [Let's Encrypt](https://letsencrypt.org/), and we then specify an ingress resource to terminate our SSL connection. For an easy setup, we use the [cert-manager](https://cert-manager.io). It creates a resource in our cluster that issues and updates certificates automatically. 
 
-**Important:** The standard port for HTTPS traffic is 443. So make sure port 443 is open, both on your firewall and that your cloud provider does not block traffic to this port. Otherwise, you won't be able to reach your application at all.
+**Important:** The standard port for HTTPS traffic is 443. So make sure port 443 is open, both on your server firewall and that your cloud provider does not block traffic to this port. Otherwise, you won't be able to reach your application at all.
 
 With this out of the way, let's get started:
 
@@ -31,13 +31,9 @@ With this out of the way, let's get started:
    cert-manager-webhook      1/1     1            1           2m41s
    ```
 
-2. Create the Certificate Issuer. We will use
-   [Let's Encrypt](https://letsencrypt.org/de/) as a free issuer. Let's Encrypt
-   offers a staging service, which has no quota limitation (because it issues no
-   real certs). We can use this for testing and later switch to the production
-   issuer to get a valid certificate for our services.
+2. Create the Certificate Issuer. We will use [Let's Encrypt](https://letsencrypt.org/de/) as a free issuer. Let's Encrypt offers a staging service, which has no quota limitation (because it issues no real certs). We can use this for testing and later switch to the production issuer to get a valid certificate for our services.
 
-   First create the staging issuer.
+	First create the staging issuer.
 
    ```YAML
    # staging-issuer.yaml
@@ -94,8 +90,7 @@ With this out of the way, let's get started:
    kubectl apply -f prod-issuer.yaml
    ```
 
-3. After we have created the certification issuer resource, we need to apply
-   some changes to our ingress resource
+3. After we have created the certification issuer resource, we need to apply some changes to our ingress resource
 
    ```YAML
    # microbot-ingress.yaml
@@ -129,17 +124,13 @@ With this out of the way, let's get started:
    kubectl apply -f microbot-ingress.yaml
    ```
 
-   After applying this, we find our site to be SSL encrypted. You might, see a
-   warning, just continue, and you will see your microbot. Note the little
-   exclamation mark, this is because we used the staging issuer (this is also
-   the reason you saw the warning).
+   After applying this, we find our site to be SSL encrypted. You might, see a warning, just continue, and you will see your microbot. Note the little exclamation mark, this is because we used the staging issuer (this is also the reason you saw the warning).
 
    ![HTTPS connection to Microbot](httpsMicrobot.png)
 
    For production, we want to change the annotation in our manifest YAML from
    `cert-manager.io/issuer: "letsencrypt-staging"` to
-   `cert-manager.io/issuer: "letsencrypt-prod"`. Also, you need to delete the SSL
-   secret, the cert manager will recreate it with the production issuer.
+   `cert-manager.io/issuer: "letsencrypt-prod"`. Also, you need to delete the SSL secret, the cert manager will recreate it with the production issuer.
 
    That's it. You enabled SSL encryption for your ingress resource.
 

@@ -29,8 +29,7 @@ runners:
        privileged = true
 ```
 
-Now we can install the GitLab runner using `helm3`. Make sure the `helm3` add-on
-is enabled.
+Now we can install the GitLab runner using `helm3`. Make sure the `helm3` add-on in your MicroK8s installation is enabled.
 
 ```bash
 microk8s helm3 install --namespace default gitlab-runner -f gitlab-runner-config.yaml gitlab/gitlab-runner
