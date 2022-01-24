@@ -66,6 +66,14 @@ export const Link = {
     color: "secondary",
     fontWeight: "bold",
   },
+  variants: {
+    currentNav: {
+      color: "warning",
+      _hover: {
+        textDecoration: "none",
+      },
+    },
+  },
 };
 
 export const Table = {

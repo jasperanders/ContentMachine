@@ -2,9 +2,11 @@ import { Container, Heading, VStack, Link, Box } from "@chakra-ui/react";
 import { useStaticQuery, Link as GLink, graphql } from "gatsby";
 import React from "react";
 import slugify from "slugify";
+import { useLocation } from "@reach/router";
 
-export default function FileDrawer() {
-  const { allMdx: data } = useStaticQuery(
+export default function FileDrawer({ location }) {
+  const loc = useLocation();
+  const { allMdx: data, sitePage } = useStaticQuery(
     graphql`
       {
         allMdx(
@@ -21,18 +23,24 @@ export default function FileDrawer() {
             slug
           }
         }
+        sitePage {
+          path
+        }
       }
     `
   );
 
+  console.log(loc.pathname);
+
+  // get entries and extract path
   const entries = data.nodes;
   entries.map((entry) => {
     entry.path = entry.parent.relativePath.split("/");
     entry.heading = entry.path.reverse()[1];
   });
-
   return (
     <Container
+      sx={{ position: "sticky", top: "2rem" }}
       bg={"secondaryLight"}
       m={"2rem"}
       boxShadow={"lg"}
@@ -59,6 +67,9 @@ export default function FileDrawer() {
               ml={"4"}
               key={entry.slug}
               to={`/${slugify(entry.parent.name, { lower: true })}`}
+              variant={
+                entry.slug.toLowerCase().includes(loc.pathname) && "currentNav"
+              }
             >
               {entry.parent.name}
             </Link>
