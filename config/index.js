@@ -1,7 +1,11 @@
 module.exports = {
   //-- SITE SETTINGS -----
   author: "Jasper Anders",
-  institution: "Jasper Anders",
+  institutionResponsible: {
+    name: "Jasper Anders",
+    contact: "@_asperanders",
+    contactChannel: "Twitter",
+  },
   siteTitle: "Building a Dev-Ops Pipeline",
   siteShortTitle: "DevOps", // Used as logo text in header, footer, and splash scree
   siteDescription: "DevOps",

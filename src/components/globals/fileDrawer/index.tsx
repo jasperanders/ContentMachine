@@ -4,7 +4,7 @@ import React from "react";
 import slugify from "slugify";
 import { useLocation } from "@reach/router";
 
-export default function FileDrawer({ location }) {
+export default function FileDrawer() {
   const loc = useLocation();
   const { allMdx: data, sitePage } = useStaticQuery(
     graphql`
@@ -40,6 +40,8 @@ export default function FileDrawer({ location }) {
   });
   return (
     <Container
+      alignSelf={"flex-start"}
+      justifySelf={"flex-end"}
       sx={{ position: "sticky", top: "2rem" }}
       bg={"secondaryLight"}
       m={"2rem"}

@@ -54,12 +54,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       });
     });
   }
-
-  createRedirect({
-    fromPath: "/",
-    isPermanent: true,
-    toPath: "/00-motivation/",
-  });
 };
 
 exports.onCreateNode = ({ node, actions }) => {

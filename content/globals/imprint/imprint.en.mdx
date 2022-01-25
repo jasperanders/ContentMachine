@@ -5,9 +5,11 @@ useSeoTitleSuffix: true
 useSplashScreen: false
 ---
 
+import { institutionResponsible } from "../../../config/index.js";
+
 # Imprint
 
-Verantwortlicher <br />
-Jasper Anders <br />
-Boeckhstr. 8 <br />
-76135 Karlsruhe
+Responsible <br />
+
+<>{institutionResponsible.name}</> <br />
+reach out to <i>{institutionResponsible.contact}</i> at <>{institutionResponsible.contactChannel}</>

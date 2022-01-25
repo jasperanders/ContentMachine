@@ -5,7 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import SEO from "../globals/seo";
 import { seoTitleSuffix } from "../../../config";
 
-import { Container, Flex } from "@chakra-ui/react";
+import { AbsoluteCenter, Container, Flex } from "@chakra-ui/react";
 
 const ImprintPage: FC<{
   body: any;
@@ -16,7 +16,7 @@ const ImprintPage: FC<{
   };
 }> = ({ title, body, seo }) => {
   return (
-    <>
+    <AbsoluteCenter>
       <SEO
         title={
           seo.useSeoTitleSuffix
@@ -30,7 +30,7 @@ const ImprintPage: FC<{
           <MDXRenderer>{body}</MDXRenderer>
         </Container>
       </Flex>
-    </>
+    </AbsoluteCenter>
   );
 };
 
