@@ -4,7 +4,7 @@ Setup Tutorial: https://cert-manager.io/docs/tutorials/acme/ingress/
 author: Jasper Anders ©
 ---
 
-# Enable HTTPS with Cert Bot
+# SSL Encryption using Cert Manager
 
 In this section, we want to enable HTTPS traffic to our cluster. For this we need a certificate issuer, that is [Let's Encrypt](https://letsencrypt.org/), and we then specify an ingress resource to terminate our SSL connection. For an easy setup, we use the [cert-manager](https://cert-manager.io). It creates a resource in our cluster that issues and updates certificates automatically. 
 

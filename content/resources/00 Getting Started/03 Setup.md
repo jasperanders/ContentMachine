@@ -2,7 +2,9 @@
 author: Jasper Anders ©
 ---
 
-# Creating a Continuous Deployment Environment
+# Setup
+
+## Creating a Continuous Deployment Environment
 
 We have seen an overview of the architecture in the previous section. Now we will show how to actually set up.
 

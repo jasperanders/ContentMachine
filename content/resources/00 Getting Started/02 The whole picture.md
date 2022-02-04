@@ -4,7 +4,9 @@ author: Jasper Anders ©
 
 ![Achitecture](./diagrams/oTreeArchitecture.png) _Open the diagram above in a separate tab and follow along._
 
-# oForest Codeflow
+# The Whole Picture
+
+## oForest Codeflow
 
 In the next paragraphs, we follow a single line of code. From its creation to its deployment to the internet. You will find keywords highlighted the first time they appear. Clicking them will provide high level motivation, specific setup procedures, and in some cases an overview of useful commands.
 

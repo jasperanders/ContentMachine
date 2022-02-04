@@ -3,7 +3,9 @@ author: Jasper Anders ©
 omitBackButton: true
 ---
 
-# Continuous Deployment: Building an Integrated DevOps Environment
+# Motivation
+
+## Continuous Deployment: Building an Integrated DevOps Environment
 
 This project aims to achieve a fast and easy deployment for [oTree](https://www.otree.org/) experiments. oTree is a python library that helps you to create experiments in the field of economics. The Karlsruhe Institute of Technology uses oTree in their [decision & design lab](https://www.kd2lab.kit.edu/english/index.php). Currently, the provisioning of new experiments is outdated and mainly manual. We wanted the new approach to be low effort for experimenters and largely automated. For this, we laid out the following user story:
 

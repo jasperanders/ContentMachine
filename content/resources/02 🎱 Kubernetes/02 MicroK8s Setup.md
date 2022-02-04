@@ -3,7 +3,9 @@ written Tutorial: https://ubuntu.com/tutorials/gitlab-cicd-pipelines-with-microk
 author: Jasper Anders ©
 ---
 
-# Setting Up Kubernetes
+# MicroK8s Setup
+
+## Setting Up Kubernetes
 
 This tutorial is based on [Official microk8s docs](https://microk8s.io/docs/).
 
