@@ -228,14 +228,14 @@ Next, we create the microbot service. Create a `microbot-service.yaml` and edit 
 apiVersion: v1
 kind: Service
 metadata:
-name: microbot-service
+  name: microbot-service
 spec:
-selector:
-  app: microbot
-ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
+  selector:
+    app: microbot
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
 ```
 
 To create the service run:
